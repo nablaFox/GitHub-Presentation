@@ -5,10 +5,11 @@ const props = defineProps({
   icon: {
     type: String,
     required: true
-  }
+  },
+  color: String
 })
 
-const component = defineAsyncComponent(() => import(`./${props.icon}.vue`))
+const component = defineAsyncComponent(() => import(`./icons/${props.icon}.vue` /* @vite-ignore */))
 </script>
 
 <template>
@@ -26,7 +27,7 @@ const component = defineAsyncComponent(() => import(`./${props.icon}.vue`))
 .wrapper { display: inline-block }
 
 .glow {
-  background-color: var(--color-accent-primary);
+  background-color: v-bind(color);
   position: absolute;
   width: 100%;
   height: 100%;

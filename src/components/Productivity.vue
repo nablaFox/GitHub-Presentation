@@ -7,7 +7,7 @@ import LinePageSection from './LinePageSection.vue'
   <LinePageSection
     class="productivity-section"
     icon="PartnershipIcon"
-    color="#7ee787"
+    color="var(--color-green)"
     firstGradient="linear-gradient(#56d364, #2ea043, #0d1117)"
     secondGradient="linear-gradient(#0d1117, #2ea043, #2ea043, #0d1117)"
     endingGradient="linear-gradient(#0d1117, #ea6045, #ffa28b)"

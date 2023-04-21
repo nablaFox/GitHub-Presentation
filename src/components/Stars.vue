@@ -13,16 +13,9 @@ const style = computed(() => {
 </script>
 
 <template>
-  <img src="../assets/images/bg-stars-1.webp" class="stars-bg" :style="style">
+  <img 
+    src="../assets/images/bg-stars-1.webp" 
+    class="absolute right-0 top-0 h-auto w-[91%] aspect-[auto_2712_/_2712]" 
+    :style="style"
+  >
 </template>
-
-<style scoped>
-.stars-bg {
-  position: absolute;
-  right: 0;
-  top: 0;
-  aspect-ratio: auto 2712 / 2712;
-  height: auto;
-  width: 91%;
-}
-</style>

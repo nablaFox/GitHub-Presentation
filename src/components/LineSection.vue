@@ -1,5 +1,5 @@
 <script setup>
-import GlowingIcon from './icons/GlowingIcon.vue'
+import GlowingIcon from './GlowingIcon.vue'
 import { useIntersectionObserver } from '@vueuse/core'
 
 const props = defineProps({
@@ -37,12 +37,12 @@ const vAnimate = {
 
 <template>
   <div 
-    class="container"
+    class="section flex"
     :style="{ height: ending ? '160px' : '1000px' }"
   >
-    <div class="column">
+    <div class="w-[8.3%] flex flex-col">
       <img 
-        class="branches"
+        class="branches transition-1 opacity-0 absolute left-[calc(50%-2px)] bottom-32"
         v-if="branches" 
         :src="branchesURL"
         v-animate
@@ -51,11 +51,13 @@ const vAnimate = {
         ref="iconTarget" 
         v-if="icon"
         :icon="icon"
-        v-animate
         :style="{ transitionDelay: iconDelay }"
+        color="var(--color-accent-primary)"
+        class="transition-1 opacity-0 scale-0 origin-center"
+        v-animate
       />
       <div
-        class="line" 
+        class="line w-[3px] h-full mx-auto rounded-md scale-y-0 origin-[0_0] transition-1" 
         ref="lineTarget"
         :style="{ 
           background: gradient, 
@@ -64,57 +66,15 @@ const vAnimate = {
         v-animate
       />
     </div>
-    <div class="content" v-if="$slots.default">
+    <div class="w-[91%]" v-if="$slots.default">
       <slot />
     </div>
   </div>
 </template>
 
 <style scoped>
-.container {
-  display: flex;
-  max-width: var(--section-max-width);
-  margin: auto;
+.animate {
+  transform: initial!important;
+  opacity: 1!important;
 }
-
-.content { width: 91% }
-
-.column {
-  width: 8.3333%;
-  display: flex; 
-  flex-direction: column;
-}
-
-.line {
-  width: 3px;
-  height: 100%;
-  margin: 0 auto;
-  border-radius: 6px;
-  transform: scaleY(0);
-  transform-origin: 0 0;
-  transition: transform .7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.line.animate {
-  transform: scaleY(1);
-}
-
-.glowing-icon {
-  transition: opacity .7s cubic-bezier(0.16, 1, 0.3, 1),
-    transform .7s cubic-bezier(0.16, 1, 0.3, 1);
-  opacity: 0;
-  transform-origin: 0 0;
-  transform: scale(0);
-}
-
-.branches {
-  transition: opacity .7s cubic-bezier(0.16, 1, 0.3, 1);
-  opacity: 0;
-  position: absolute;
-  left: calc(50% - 2px);
-  bottom: 100px;
-}
-
-.branches.animate { opacity: 1; }
-.glowing-icon.animate { opacity: 1; transform: scale(1) }
 </style>

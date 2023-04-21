@@ -41,3 +41,6 @@ defineProps({
   </div>
 </template>
 
+<style scoped>
+/** styling using --color-accent-primary */
+</style>
