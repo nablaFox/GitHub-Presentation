@@ -9,7 +9,7 @@ const props = defineProps({
   color: String
 })
 
-const component = defineAsyncComponent(() => import(`./icons/${props.icon}.vue` /* @vite-ignore */))
+const component = defineAsyncComponent(() => import(`./icons/${props.icon}Icon.vue` /* @vite-ignore */))
 </script>
 
 <template>
@@ -22,8 +22,6 @@ const component = defineAsyncComponent(() => import(`./icons/${props.icon}.vue` 
 </template>
 
 <style scoped>
-.glowing-icon { margin: 16px auto }
-
 .wrapper { display: inline-block }
 
 .glow {

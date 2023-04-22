@@ -1,1 +1,1 @@
-# GitHub Landpage Clone
+# A GitHub presentation with the GitHub theme

@@ -1,29 +1,19 @@
 <script setup>
 import Header from './components/Header.vue'
 import Hero from './components/Hero.vue'
-import Productivity from './components/Productivity.vue'
-import Collaboration from './components/Collaboration.vue'
-import Security from './components/Security.vue'
-import Demo from './components/Demo.vue'
+import Introduction from './components/Introduction.vue'
+import Community from './components/Community.vue'
+import History from './components/History.vue'
 import Footer from './components/Footer.vue'
 </script>
 
 <template>
-
   <Header />
-  <main>
+  <main class="overflow-hidden">
     <Hero />
-    <Productivity />
-    <Collaboration />
-    <Security />
-    <Demo />
+    <Introduction />
+    <Community />
+    <History />
   </main>
   <Footer />
- 
 </template>
-
-<style scoped>
-main {
-  overflow: hidden
-}
-</style>

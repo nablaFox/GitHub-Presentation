@@ -1,5 +1,8 @@
 <template>
-  <img src="../assets/images/hero-drone.webp" class="drone absolute top-0 z-10 right-0 w-1/4">
+  <img 
+    src="../assets/images/hero-drone.webp" 
+    class="drone absolute top-0 z-10 right-0 w-1/4"
+  >
 </template>
 
 <style scoped>

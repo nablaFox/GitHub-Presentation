@@ -6,7 +6,7 @@
           <img src="../assets/logo.svg" alt="Github Logo" width="32" height="32">
           <div class="name"> Github </div>
         </div>
-        <a href=""> See more </a>
+        <a href="https://github.com"> See more </a>
       </div>
     </header>
   </div>

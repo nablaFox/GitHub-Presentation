@@ -15,7 +15,7 @@ const style = computed(() => {
 <template>
   <img 
     src="../assets/images/bg-stars-1.webp" 
-    class="absolute right-0 top-0 h-auto w-[91%] aspect-[auto_2712_/_2712]" 
+    class="absolute right-0 top-0 h-auto w-[120%] aspect-[auto_2712_/_2712] z-[-1]" 
     :style="style"
   >
 </template>

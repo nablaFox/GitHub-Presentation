@@ -4,14 +4,26 @@
 
 :root {
   --section-max-width: 1280px;
-  --color-coral: #ff7f50;
-  --color-black-navie: #0d1116;
-  --color-white: #fff;
-  --color-grey: #7d8590;
-  --color-purple: #6e40c9;
-  --color-purple-1: #bc8cff;
-  --color-blue: #939aff;
-  --color-green: #7ee787;
+  --color-scale-coral-0: #ffa28b;
+  --color-scale-coral-1: #ff7f50;
+  --color-scale-navie-0: #0d1116;
+  --color-scale-navie-1: #161b22;
+  --color-scale-white-0: #fff;
+  --color-scale-grey-0: #ebf5ff80;
+  --color-scale-grey-1: #7d8590;
+  --color-scale-grey-2: #6e7681;
+  --color-scale-grey-3: #424b5b;
+  --color-scale-grey-4: #30363d;
+  --color-scale-purple-0: #bc8cff;
+  --color-scale-purple-1: #6e40c9;
+  --color-scale-blue-0: #939aff;
+  --color-scale-green-0: #7ee787;
+  --color-scale-white-0: #fff;
+}
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("fonts/mona-sans.woff2")
 }
 
 @layer base {
@@ -24,7 +36,11 @@
   img { @apply pointer-events-none }
 
   body {
-    @apply bg-black-navie text-white;
+    @apply bg-navie text-white;
+  }
+
+  svg {
+    @apply inline-block
   }
 }
 
@@ -36,5 +52,12 @@
 
   .transition-1 {
     @apply transition-all duration-[.7s] ease-out-quart;
+  }
+
+  .text-gradient-accent {
+    background: -webkit-linear-gradient(-70deg, var(--color-accent-primary, #9867f0) 0%, #aff5b4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    --webkit-box-decoration-break: clone;
   }
 }
